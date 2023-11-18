@@ -100,7 +100,7 @@ rootMenuConfig =  {
         enableMenu = function()
             return (isMedic and not isDead)
         end,
-        subMenus = { "työ:ilmoitus" }
+        subMenus = { "ensihoito:tutki", "ensihoito:elvytä", "ensihoito:hoida", "ensihoito:ajoneuvoon" }
 
     }
 }
@@ -126,19 +126,19 @@ newSubMenus = {
     },
 
     ['general:emotes'] = {
-        title = "Animaatiolista",
+        title = "Emote Valikko",
         icon = "#general-emotes",
-        functionName = "animations:client:EmoteMenu"
+        functionName = "emotevalikko"
     },   
 	['general:kartta'] = {
-        title = "Testausta",
+        title = "Hud Menu",
         icon = "#kartta",
-        functionName = "rhd_garage:storeVehicle"
+        functionName = "hudi"
     },   
 	['general:suuri'] = {
         title = "testi",
         icon = "#suuri2",
-        functionName = "nh-context:testMenu"
+        functionName = "illenium-appearance:client:OutfitManagementMenu"
     },  
 	['general:laskut'] = {
         title = "Laskut",
@@ -271,7 +271,7 @@ newSubMenus = {
     ['työ:ilmoitus'] = {
         title = "ILMOITUS",
         icon = "#tietokanta",
-        functionName = "GoatRico:OpenAdMenu"
+        functionName = "fizzfau-gps:connectGps"
     },
     ['hud:asetukset'] = {
         title = "HUD",
@@ -333,6 +333,27 @@ newSubMenus = {
         title = "Ajoneuvo Tiedot",
         icon = "#raudoita",
         functionName = "wasabi_police:vehicleInteractions"
+    },
+    --Ensihoito
+    ['ensihoito:tutki'] = {
+        title = "Tutki Potilasta",
+        icon = "#raudoita",
+        functionName = "wasabi_ambulance:diagnosePatient"
+    },
+    ['ensihoito:elvytä'] = {
+        title = "Elvytä Potilas",
+        icon = "#raudoita",
+        functionName = "wasabi_ambulance:reviveTarget"
+    },
+    ['ensihoito:hoida'] = {
+        title = "Hoida Haavoja",
+        icon = "#raudoita",
+        functionName = "wasabi_ambulance:healTarget"
+    },
+    ['ensihoito:ajoneuvoon'] = {
+        title = "Kuljeta Potilasta",
+        icon = "#raudoita",
+        functionName = "wasabi_ambulance:placeInVehicle"
     },
 
 }
